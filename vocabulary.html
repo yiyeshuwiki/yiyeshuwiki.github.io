@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>词汇｜一页书</title>
 
     <style>
@@ -12,135 +13,197 @@
 
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         "Microsoft YaHei", sans-serif;
             background: #f5f7fa;
             color: #1f2937;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                "Microsoft YaHei",
+                sans-serif;
         }
 
         .container {
-            max-width: 950px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 45px 24px;
+            padding: 50px 25px;
         }
 
+        /* 返回按钮 */
+
         .back {
+            display: inline-block;
+            margin-bottom: 25px;
             color: #0075c1;
             text-decoration: none;
             font-size: 15px;
         }
 
+        /* 顶部 */
+
         .hero {
             background: white;
-            border-radius: 18px;
-            padding: 35px;
-            margin: 25px 0 30px;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
         }
 
         .hero h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 38px;
         }
 
         .hero p {
-            color: #6b7280;
             margin: 12px 0 0;
+            color: #6b7280;
+            font-size: 17px;
         }
+
+        /* 单词卡片 */
 
         .word {
             background: white;
-            border-radius: 16px;
-            padding: 30px 32px;
-            margin-bottom: 22px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.05);
         }
 
-        .word-title {
+        .word-header {
             display: flex;
             align-items: baseline;
-            gap: 15px;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
-        .word-title h2 {
+        .word-header h2 {
             margin: 0;
-            font-size: 30px;
+            font-size: 34px;
         }
 
         .ipa {
             color: #0075c1;
-            font-size: 16px;
-        }
-
-        .pos {
-            color: #0075c1;
-            font-weight: 600;
-            margin: 10px 0 18px;
-        }
-
-        .label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #374151;
-            margin: 20px 0 10px;
-        }
-
-        .core {
             font-size: 18px;
         }
 
+        .pos {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0075c1;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* 小标题 */
+
+        .section-title {
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        /* 核心义 */
+
+        .core {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        /* 常见义项 */
+
         .meaning {
-            margin-bottom: 18px;
+            margin-bottom: 24px;
         }
 
         .meaning-title {
+            font-size: 17px;
             font-weight: 600;
-            margin-bottom: 7px;
+            margin-bottom: 8px;
         }
+
+        /* 例句 */
 
         .example {
             background: #f5f7fa;
-            border-radius: 10px;
-            padding: 13px 17px;
+            border-radius: 12px;
+            padding: 16px 20px;
             line-height: 1.7;
         }
 
         .example-en {
-            font-size: 16px;
+            font-size: 17px;
         }
 
         .example-cn {
+            margin-top: 4px;
             color: #6b7280;
-            margin-top: 3px;
+            font-size: 15px;
         }
+
+        /* 词组 */
 
         .phrase {
+            padding: 18px 0;
             border-top: 1px solid #e5e7eb;
-            padding: 16px 0;
         }
 
-        .phrase:first-child {
+        .phrase:first-of-type {
             border-top: none;
         }
 
         .phrase-name {
-            font-weight: 600;
-            font-size: 16px;
+            font-size: 17px;
+            font-weight: 700;
         }
 
         .phrase-meaning {
+            margin: 5px 0 12px;
             color: #6b7280;
-            margin: 4px 0 9px;
         }
+
+        /* 底部 */
 
         footer {
             text-align: center;
+            margin-top: 45px;
             color: #9ca3af;
             font-size: 13px;
-            margin-top: 45px;
         }
+
+        /* 手机 */
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 30px 16px;
+            }
+
+            .hero {
+                padding: 28px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .word {
+                padding: 25px;
+            }
+
+            .word-header h2 {
+                font-size: 28px;
+            }
+
+            .core {
+                font-size: 18px;
+            }
+        }
+
     </style>
 </head>
+
 
 <body>
 
@@ -148,182 +211,334 @@
 
     <a class="back" href="english.html">← 返回英语</a>
 
+
+    <!-- 顶部 -->
+
     <section class="hero">
+
         <h1>词汇 Vocabulary</h1>
-        <p>记录常用词义、典型例句和地道搭配。</p>
+
+        <p>
+            记录常用词义、典型例句和地道搭配。
+        </p>
+
     </section>
 
 
+    <!-- ========================= -->
     <!-- stake -->
+    <!-- ========================= -->
 
-    <div class="word">
+    <article class="word">
 
-        <div class="word-title">
+        <div class="word-header">
+
             <h2>stake</h2>
+
             <span class="ipa">/steɪk/</span>
+
         </div>
 
         <div class="pos">n.</div>
 
-        <div class="label">核心义</div>
-        <div class="core">利益；股份；赌注</div>
+
+        <!-- 核心义 -->
+
+        <div class="section-title">
+            核心义
+        </div>
+
+        <div class="core">
+            利益；股份；赌注
+        </div>
 
 
-        <div class="label">常见义项</div>
+        <!-- 常见义项 -->
+
+        <div class="section-title">
+            常见义项
+        </div>
+
 
         <div class="meaning">
-            <div class="meaning-title">① 利益；利害关系</div>
+
+            <div class="meaning-title">
+                ① 利益；利害关系
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     Everyone has a stake in the success of the project.
                 </div>
+
                 <div class="example-cn">
                     每个人都与这个项目的成功息息相关。
                 </div>
+
             </div>
+
         </div>
 
+
         <div class="meaning">
-            <div class="meaning-title">② 股份；股权</div>
+
+            <div class="meaning-title">
+                ② 股份；股权
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     She owns a 10% stake in the company.
                 </div>
+
                 <div class="example-cn">
                     她持有这家公司10%的股份。
                 </div>
+
             </div>
+
         </div>
 
+
         <div class="meaning">
-            <div class="meaning-title">③ 赌注</div>
+
+            <div class="meaning-title">
+                ③ 赌注
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     He put all his money at stake.
                 </div>
+
                 <div class="example-cn">
                     他把所有的钱都押上了。
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="label">常用词组搭配</div>
+        <!-- 常用词组 -->
+
+        <div class="section-title">
+            常用词组搭配
+        </div>
+
 
         <div class="phrase">
-            <div class="phrase-name">at stake</div>
-            <div class="phrase-meaning">处于危险之中；关系到……</div>
+
+            <div class="phrase-name">
+                at stake
+            </div>
+
+            <div class="phrase-meaning">
+                处于危险之中；关系到……
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     The future of the company is at stake.
                 </div>
+
                 <div class="example-cn">
                     公司的未来正处于危险之中。
                 </div>
+
             </div>
+
         </div>
 
+
         <div class="phrase">
-            <div class="phrase-name">have a stake in</div>
-            <div class="phrase-meaning">在……中有利益</div>
+
+            <div class="phrase-name">
+                have a stake in
+            </div>
+
+            <div class="phrase-meaning">
+                在……中有利益
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     Employees have a stake in the company's success.
                 </div>
+
                 <div class="example-cn">
                     员工的利益与公司的成功息息相关。
                 </div>
+
             </div>
+
         </div>
 
+
         <div class="phrase">
-            <div class="phrase-name">hold a stake in</div>
-            <div class="phrase-meaning">持有……的股份</div>
+
+            <div class="phrase-name">
+                hold a stake in
+            </div>
+
+            <div class="phrase-meaning">
+                持有……的股份
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     He holds a 20% stake in the company.
                 </div>
+
                 <div class="example-cn">
                     他持有这家公司20%的股份。
                 </div>
+
             </div>
+
         </div>
 
+
         <div class="phrase">
-            <div class="phrase-name">a personal stake</div>
-            <div class="phrase-meaning">个人利益</div>
+
+            <div class="phrase-name">
+                a personal stake
+            </div>
+
+            <div class="phrase-meaning">
+                个人利益
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     She has a personal stake in the decision.
                 </div>
+
                 <div class="example-cn">
                     这个决定关系到她个人的利益。
                 </div>
+
             </div>
+
         </div>
 
-    </div>
+    </article>
 
 
+    <!-- ========================= -->
     <!-- numerous -->
+    <!-- ========================= -->
 
-    <div class="word">
+    <article class="word">
 
-        <div class="word-title">
+        <div class="word-header">
+
             <h2>numerous</h2>
+
             <span class="ipa">/ˈnuːmərəs/</span>
+
         </div>
 
         <div class="pos">adj.</div>
 
-        <div class="label">核心义</div>
-        <div class="core">许多的；众多的</div>
+
+        <div class="section-title">
+            核心义
+        </div>
+
+        <div class="core">
+            许多的；众多的
+        </div>
 
 
-        <div class="label">常见义项</div>
+        <div class="section-title">
+            常见义项
+        </div>
+
 
         <div class="meaning">
-            <div class="meaning-title">① 许多的；大量的</div>
+
+            <div class="meaning-title">
+                ① 许多的；大量的
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     There are numerous reasons for this decision.
                 </div>
+
                 <div class="example-cn">
                     做出这个决定有很多原因。
                 </div>
+
             </div>
+
         </div>
 
 
-        <div class="label">常用词组搭配</div>
+        <div class="section-title">
+            常用词组搭配
+        </div>
+
 
         <div class="phrase">
-            <div class="phrase-name">numerous examples</div>
-            <div class="phrase-meaning">许多例子</div>
+
+            <div class="phrase-name">
+                numerous examples
+            </div>
+
+            <div class="phrase-meaning">
+                许多例子
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     There are numerous examples of this problem.
                 </div>
+
                 <div class="example-cn">
                     这个问题有很多例子。
                 </div>
+
             </div>
+
         </div>
 
+
         <div class="phrase">
-            <div class="phrase-name">numerous reasons</div>
-            <div class="phrase-meaning">许多原因</div>
+
+            <div class="phrase-name">
+                numerous reasons
+            </div>
+
+            <div class="phrase-meaning">
+                许多原因
+            </div>
+
             <div class="example">
+
                 <div class="example-en">
                     There are numerous reasons why people choose this option.
                 </div>
+
                 <div class="example-cn">
                     人们选择这个选项有很多原因。
                 </div>
+
             </div>
+
         </div>
 
-    </div>
+    </article>
 
 
     <footer>
