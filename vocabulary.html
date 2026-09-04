@@ -19,7 +19,7 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 45px 24px;
         }
@@ -34,7 +34,7 @@
             background: white;
             border-radius: 18px;
             padding: 35px;
-            margin: 25px 0;
+            margin: 25px 0 30px;
             box-shadow: 0 6px 25px rgba(0,0,0,0.05);
         }
 
@@ -45,44 +45,93 @@
 
         .hero p {
             color: #6b7280;
-            margin-bottom: 0;
+            margin: 12px 0 0;
         }
 
         .word {
             background: white;
             border-radius: 16px;
-            padding: 25px 30px;
-            margin-bottom: 18px;
+            padding: 28px 32px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 18px rgba(0,0,0,0.04);
         }
 
-        .word h2 {
-            margin: 0 0 8px;
-            font-size: 25px;
+        .word-title {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            margin-bottom: 5px;
+        }
+
+        .word-title h2 {
+            margin: 0;
+            font-size: 28px;
         }
 
         .ipa {
             color: #0075c1;
             font-size: 16px;
-            margin-bottom: 15px;
         }
 
-        .meaning {
-            font-size: 17px;
-            margin-bottom: 12px;
+        .pos {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0075c1;
+            margin: 8px 0 18px;
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin: 18px 0 8px;
+        }
+
+        .core {
+            font-size: 18px;
+        }
+
+        .meanings {
+            line-height: 1.8;
+            padding-left: 22px;
+            margin: 0;
         }
 
         .example {
             background: #f5f7fa;
-            padding: 14px 18px;
             border-radius: 10px;
-            line-height: 1.7;
+            padding: 15px 18px;
+            line-height: 1.8;
         }
 
-        .note {
+        .example-en {
+            font-size: 16px;
+        }
+
+        .example-cn {
             color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .collocations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .tag {
+            background: #f0f6fa;
+            border-radius: 7px;
+            padding: 7px 11px;
             font-size: 14px;
-            margin-top: 12px;
+        }
+
+        footer {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 45px;
         }
     </style>
 </head>
@@ -95,38 +144,96 @@
 
     <section class="hero">
         <h1>词汇 Vocabulary</h1>
-        <p>记录单词、多义词、短语、固定搭配和地道表达。</p>
+        <p>记录单词、词义、例句和常用搭配。</p>
     </section>
 
-    <div class="word">
-        <h2>stake</h2>
-        <div class="ipa">/steɪk/</div>
-        <div class="meaning">n. 利益；股份；赌注；风险</div>
 
-        <div class="example">
-            <strong>例句：</strong><br>
-            He has a stake in the company.
-            <br>
-            他在这家公司拥有股份。
-        </div>
-
-        <div class="note">
-            根据不同语境，stake 可以表示“股份、利益、赌注”等。
-        </div>
-    </div>
+    <!-- 单词：stake -->
 
     <div class="word">
-        <h2>numerous</h2>
-        <div class="ipa">/ˈnuːmərəs/</div>
-        <div class="meaning">adj. 众多的；许多的</div>
 
-        <div class="example">
-            <strong>例句：</strong><br>
-            There are numerous reasons for this decision.
-            <br>
-            做出这个决定有很多原因。
+        <div class="word-title">
+            <h2>stake</h2>
+            <span class="ipa">/steɪk/</span>
         </div>
+
+        <div class="pos">n.</div>
+
+        <div class="label">核心义</div>
+        <div class="core">利益；利害关系</div>
+
+        <div class="label">多义项</div>
+        <ol class="meanings">
+            <li>利益；利害关系</li>
+            <li>股份</li>
+            <li>赌注</li>
+            <li>风险</li>
+        </ol>
+
+        <div class="label">例句</div>
+        <div class="example">
+            <div class="example-en">
+                He has a stake in the company.
+            </div>
+            <div class="example-cn">
+                他在这家公司拥有股份。
+            </div>
+        </div>
+
+        <div class="label">词组搭配</div>
+        <div class="collocations">
+            <span class="tag">have a stake in</span>
+            <span class="tag">hold a stake in</span>
+            <span class="tag">a financial stake</span>
+            <span class="tag">raise the stakes</span>
+        </div>
+
     </div>
+
+
+    <!-- 单词：numerous -->
+
+    <div class="word">
+
+        <div class="word-title">
+            <h2>numerous</h2>
+            <span class="ipa">/ˈnuːmərəs/</span>
+        </div>
+
+        <div class="pos">adj.</div>
+
+        <div class="label">核心义</div>
+        <div class="core">许多的；众多的</div>
+
+        <div class="label">多义项</div>
+        <ol class="meanings">
+            <li>许多的；大量的</li>
+            <li>众多的；数量很大的</li>
+        </ol>
+
+        <div class="label">例句</div>
+        <div class="example">
+            <div class="example-en">
+                There are numerous reasons for this decision.
+            </div>
+            <div class="example-cn">
+                做出这个决定有很多原因。
+            </div>
+        </div>
+
+        <div class="label">词组搭配</div>
+        <div class="collocations">
+            <span class="tag">numerous examples</span>
+            <span class="tag">numerous reasons</span>
+            <span class="tag">numerous occasions</span>
+        </div>
+
+    </div>
+
+
+    <footer>
+        一页书 · 英语 · 词汇
+    </footer>
 
 </div>
 
